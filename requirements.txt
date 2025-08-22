@@ -1,10 +1,21 @@
-fastapi
-uvicorn
-openai
-python-dotenv
-langchain
-faiss-cpu
-beautifulsoup4
-requests
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# OpenAI + env
+openai>=1.35
+python-dotenv>=1.0
+
+# RAG / NLP stack
+langchain>=0.2.0
+faiss-cpu>=1.8.0
+beautifulsoup4>=4.12
+requests>=2.31
 transformers>=4.41.0
 sentence-transformers>=2.6.1
+
+# Pydantic + email validator (dibutuhkan oleh EmailStr)
+pydantic[email]>=2.5
+email-validator>=2.0
+
+# Form-data (kalau upload/file parsing)
+python-multipart>=0.0.9
